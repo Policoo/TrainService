@@ -43,7 +43,7 @@ public class TrainService {
             System.out.println(getResponse);
         }
 
-        System.out.println("\n--- Scenario 2: Duplicate Booking (Should Fail) ---");
+        System.out.println("\n--- Scenario 2: Duplicate Booking ---");
         Response response2 = client.post("/reservation", request1);
         System.out.println(response2);
 
@@ -72,7 +72,7 @@ public class TrainService {
         Response response3 = client.post("/reservation", request3);
         System.out.println(response3);
 
-        System.out.println("\n--- Scenario 4: Duplicate Mixed Booking (Should Fail) ---");
+        System.out.println("\n--- Scenario 4: Duplicate Mixed Booking ---");
         Response response4 = client.post("/reservation", request3);
         System.out.println(response4);
     }
