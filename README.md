@@ -17,7 +17,7 @@ Windows (PowerShell):
 ```powershell
 New-Item -ItemType Directory -Force out | Out-Null
 Get-ChildItem -Recurse -Filter *.java src | ForEach-Object { $_.FullName } | Set-Content sources.txt
-javac -d out @sources.txt
+javac -d out '@sources.txt'
 ```
 
 ## Run main
@@ -42,6 +42,6 @@ Windows (PowerShell):
 ```powershell
 New-Item -ItemType Directory -Force out | Out-Null
 Get-ChildItem -Recurse -Filter *.java src, test | ForEach-Object { $_.FullName } | Set-Content sources.txt
-javac -cp lib/junit-platform-console-standalone.jar -d out @sources.txt
+javac -cp lib/junit-platform-console-standalone.jar -d out '@sources.txt'
 java -jar lib/junit-platform-console-standalone.jar -cp out --scan-classpath
 ```
